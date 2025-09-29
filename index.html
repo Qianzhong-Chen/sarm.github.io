@@ -105,8 +105,8 @@
             <h1 class="title is-1 publication-title">SARM: Stage-Aware Reward Modeling for Long Horizon Robot Manipulation</h1>
             <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                <a target="_blank" href="https://qianzhong-chen.github.io/">Qianzhong Chen</a><sup>1</sup>,
-                <a target="_blank" href="https://uynitsuj.github.io/about/">Justin Yu</a><sup>2</sup>,
+                <a target="_blank" href="https://qianzhong-chen.github.io/">Qianzhong Chen</a><sup>1, 3</sup>,
+                <a target="_blank" href="https://uynitsuj.github.io/about/">Justin Yu</a><sup>2, 3</sup>,
                 <a target="_blank" href="https://web.stanford.edu/~schwager/">Mac Schwager</a><sup>1</sup>,
                 <a target="_blank" href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a><sup>2</sup>,
                 <a target="_blank" href="https://fredshentu.github.io/">Yide Shentu</a><sup>2, 3</sup>,
@@ -235,6 +235,31 @@
                 <p class="content has-text-justified">
                     Examples of SARM's prediction on demonstration data
                 </p>
+
+
+                <section class="hero teaser">
+                <div class="container is-max-widescreen">
+                    <div class="hero-body">
+                        <div class="container">
+                            <div class="columns is-vcentered  is-centered">
+                                <video id="teaser" muted loop controls height="100%" width="100%">
+                    <source src="media/videos/demo_sparse.mp4"
+                            type="video/mp4">
+                </video>
+                                </br>
+                            </div>
+                            <br>
+                            <h2 class="subtitle has-text-centered">
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <p class="content has-text-justified">
+                    Video samples of SARM's prediction on demonstration data, delivering accurate and semantically meaningful estimations.
+                </p>
+
+
+
                 <h4 class="title is-4">Policy Rollout Estimation</h4>
                 <div class="column1">
                     <img src="media/figures/rm_rollout.png" alt="arch-imag" style="width:100%">
@@ -253,9 +278,26 @@
                     estimates across all four stages, reflecting the actual task status. 
                 </p>
 
-                <h4 class="title is-4">Leverge SARM for Policy Training</h4>
+                <h4 class="title is-4">Leverage SARM for Policy Training</h4>
                 <div class="column1">
                     <img src="media/figures/policy_rollout.png" alt="arch-imag" style="width:100%">
+                </div>
+                <section class="hero teaser">
+                <div class="container is-max-widescreen">
+                    <div class="hero-body">
+                        <div class="container">
+                            <div class="columns is-vcentered  is-centered">
+                                <video id="teaser" muted loop controls height="100%" width="100%">
+                    <source src="media/videos/policy_rollout_4x.mp4"
+                            type="video/mp4">
+                </video>
+                                </br>
+                            </div>
+                            <br>
+                            <h2 class="subtitle has-text-centered">
+                            </h2>
+                        </div>
+                    </div>
                 </div>
                 <p class="content has-text-justified">
                     Example of RA-BC trained T-shirt folding policy rollout.
