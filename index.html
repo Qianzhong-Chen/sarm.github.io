@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SARM: Stage-Aware Reward Modeling for Long Horizon Robot Manipulation">
+  <meta name="keywords" content="Imitation Learning, Reward Modeling, Robotics Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Stage-Aware Reward Modeling for Long Horizon Robot Manipulation">
+  <meta name="author" content="Qianzhong Chen">
+  <meta property="og:title" content="SARM: Stage-Aware Reward Modeling for Long Horizon Robot Manipulation">
+  <meta property="og:description" content="SARM: Stage-Aware Reward Modeling for Long Horizon Robot Manipulation">
+  <meta property="og:url" content="https://qianzhong-chen.github.io/sarm.github.io/">
+
+  <title>SARM: Stage-Aware Reward Modeling for Long Horizon Robot Manipulation</title>
+
+
+    <!-- Thumbnail for social media sharing -->
+    <!-- <meta property="og:image" content="media/thumbnail.jpg"> -->
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="media/thumbnail.jpg" type="image/jpeg"> -->
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    </script>
+
+    <script>
+        function updateInTheWild() {
+            var task = document.getElementById("inthewild-video-menu").value;
+
+            console.log("updateInTheWild", task)
+
+            var video = document.getElementById("inthewild-video");
+            video.src = "media/videos/" +
+                task +
+                ".m4v"
+            video.play();
+        }
+
+        function updateBimanual() {
+            var task = document.getElementById("bimanual-video-menu").value;
+
+            console.log("updateBimanual", task)
+
+            var video = document.getElementById("bimanual-video");
+            video.src = "media/videos/1_" +
+                task +
+                ".mp4"
+            video.play();
+        }
+
+        function updateClothes() {
+            var task = document.getElementById("clothes-video-menu").value;
+
+            console.log("updateclothes", task)
+
+            var img = document.getElementById("clothes-img");
+            img.src = "media/fold-strategies/" +
+                task +
+                ".jpeg"
+
+            var video = document.getElementById("clothes-video");
+            video.src = "media/videos/fold-" +
+                task +
+                ".mp4"
+            video.play();
+        }
+    </script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <link rel="stylesheet" href="./static/source_serif_4.css">
+    <link rel="stylesheet" href="./static/source_sans_3.css">
+    <link rel="stylesheet" href="./static/academicons.min.css">
+    <link rel="stylesheet" href="./static/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./static/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="./static/fontawesome/css/light.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body onload="updateInTheWild();updateBimanual();">
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-fullhd">
+        <div class="columns is-centered">
+            <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SARM: Stage-Aware Reward Modeling for Long Horizon Robot Manipulation</h1>
+            <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                <a target="_blank" href="https://qianzhong-chen.github.io/">Qianzhong Chen</a><sup>1</sup>,
+                <a target="_blank" href="https://uynitsuj.github.io/about/">Justin Yu</a><sup>2</sup>,
+                <a target="_blank" href="https://web.stanford.edu/~schwager/">Mac Schwager</a><sup>1</sup>,
+                <a target="_blank" href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a><sup>2</sup>,
+                <a target="_blank" href="https://fredshentu.github.io/">Yide Shentu</a><sup>2, 3</sup>,
+                <a target="_blank" href="https://wuphilipp.github.io/">Philipp Wu</a><sup>3</sup>
+                </span>
+            </div>
+            <div class="is-size-5 affiliation">
+                <sup>1</sup>Stanford University
+                <sup>2</sup>UC Berkeley
+                <sup>3</sup><a target="_blank" href="https://www.xdof.ai/">xdof.ai
+            </div>
+            <br>
+            <!-- <div class="affiliation-note">
+                <sup>*</sup> indicates equal contributions
+            </div> -->
+            <div class="button-container">
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+      
+
+    <div class="buttons is-centered" style="display: flex; justify-content: center; gap: 10px; max-width: 400px; margin: auto;">
+        <a class="button is-primary" style="flex: 1; max-width: 180px; text-align: center;" href="https://qianzhong-chen.github.io/sarm.github.io/" target="_blank">Arxiv (coming soon)</a>
+        <a class="button is-link" style="flex: 1; max-width: 180px; text-align: center;" href="https://qianzhong-chen.github.io/sarm.github.io/" target="_blank">Code (coming soon)</a>
+    </div>
+    
+    
+    
+    
+
+    <section class="hero teaser">
+        <div class="container is-max-widescreen">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-vcentered  is-centered">
+                        <video id="teaser" muted loop controls height="100%" width="100%">
+            <source src="media/videos/sarm.mp4"
+                    type="video/mp4">
+          </video>
+                        </br>
+                    </div>
+                    <br>
+                    <h2 class="subtitle has-text-centered">
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container is-max-widescreen">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Large scale robot learning has recently shown promise in enabling robots to per-
+                            form complex tasks by integrating perception, control, and optionally, language
+                            understanding into a unified framework. However, they continue to struggle with
+                            long-horizon, contact-rich manipulation tasks, such as the handling of deformable
+                            objects, where supervision from demonstrations is often inconsistent in quality. In
+                            such settings, reward modeling offers a natural solution: by providing grounded
+                            progress signals, it can transform noisy demonstrations into stable supervision that
+                            generalizes across diverse trajectories. In this work, we introduce a stage-aware,
+                            video-based reward modeling framework that jointly predicts the high-level task
+                            stage and fine-grained progress within each stage. Reward labels are automatically
+                            derived from natural language subtask annotations, enabling consistent progress
+                            estimation across variable-length and heterogeneous demonstrations. This design
+                            overcomes the limitations of frame-index-based labeling, which collapses in long,
+                            variable-duration tasks such as folding a T-shirt. Our reward model demonstrates
+                            robustness to demonstration variability, generalization to out-of-distribution sce-
+                            narios, and strong utility for downstream policy training. Building upon this re-
+                            ward model, we propose the Reward-Aligned Behavior Cloning (RA-BC) frame-
+                            work, which selectively filters high-quality data and reweights training samples
+                            according to reward estimates. Extensive experiments demonstrate that the reward
+                            model outperforms baselines on out-of-distribution real robot policy rollouts and
+                            human demonstration validation. Our approach achieves 83% success on folding
+                            T-shirts from the flattened state and 67% from the crumpled state—dramatically
+                            surpassing vanilla behavior cloning, which attains only 8% and 0% success un-
+                            der the same training dataset, respectively. Overall, our results highlight reward
+                            modeling as a key enabler for scalable, annotation-efficient, and robust imitation
+                            learning in long-horizon robotic manipulation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="rounded">
+            <div class="rows">
+                <h2 class="title is-3">Overview of our method</h2>
+                <div class="column1 has-text-centered">
+                    <img src="media/figures/system.png" alt="arch-imag" style="width:80%">
+                </div>
+                <p class="content has-text-justified">
+                    Overview of our method's framework for (a) data processing, (b) reward model training,
+                    and (c) policy training with reward signals. 
+                </p>
+            </div>
+
+            <hr class="rounded">
+            <div class="rows">
+                <h2 class="title is-3">SARM's structure</h2>
+                <div class="column1 has-text-centered">
+                    <img src="media/figures/rm.png" alt="arch-imag" style="width:80%">
+                </div>
+                <p class="content has-text-justified">
+                    Overview of SARM, stage-aware reward modeling. Left: SARM overview, which in-
+                    cludes both a stage estimator and subtask estimator. First the task stage is predicted from the ob-
+                    servations. This prediction is additionally passed into the subtask estimator which predicts a scale
+                    value of the progress within the stage. Right: An overview of the estimator architecture which is
+                    replicated for both the stage estimator and the subtask estimato
+                </p>
+            </div>
+
+            <hr class="rounded">
+            <div class="rows">
+                <h2 class="title is-3">Results of SARM</h2>
+
+                
+                
+                <h4 class="title is-4">Demo Data Estimation</h4>
+                <div class="column1">
+                    <img src="media/figures/rm_demo.png" alt="arch-imag" style="width:100%">
+                </div>
+                <p class="content has-text-justified">
+                    Examples of SARM's prediction on demonstration data
+                </p>
+                <h4 class="title is-4">Policy Rollout Estimation</h4>
+                <div class="column1">
+                    <img src="media/figures/rm_rollout.png" alt="arch-imag" style="width:100%">
+                </div>
+                <p class="content has-text-justified">
+                    Examples of SARM's prediction on policy rollouts. 
+                    Compared with human demonstration data, policy rollouts are more challenging because
+                    they often include failure modes that are out-of-distribution (OOD), such as misgrasps, recovery
+                    attempts, and back-and-forth motions. In the first example, the trajectory corresponds to a successful
+                    rollout where the robot folds the T-shirt correctly, with only minor struggles and misgrasps in the
+                    first ten seconds. In this case, SARM remains stable, keeping the estimated progress near zero during
+                    these OOD motions.
+                    The second example highlights a failed rollout, with four key frames: (1) the T-shirt is flattened after
+                    struggling, (2) folding is nearly complete, (3) the robot suddenly fails and crumples the T-shirt on
+                    the table, and (4) the unfolded T-shirt is placed in the corner. SARM provides reasonable progress
+                    estimates across all four stages, reflecting the actual task status. 
+                </p>
+
+                <h4 class="title is-4">Leverge SARM for Policy Training</h4>
+                <div class="column1">
+                    <img src="media/figures/policy_rollout.png" alt="arch-imag" style="width:100%">
+                </div>
+                <p class="content has-text-justified">
+                    Example of RA-BC trained T-shirt folding policy rollout.
+                </p>
+                
+            </div>
+
+            <hr class="rounded">
+            <div class="rows">
+                <h2 class="title is-3">Citations</h2>
+                <p class="content has-text-justified">
+                    If you find our work useful in your research, please consider citing:
+                </p>
+                <pre><code>
+@misc{PLACE_HOLDER,
+      title={GRaD-Nav: Efficiently Learning Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics}, 
+      author={Qianzhong Chen and Jiankai Sun and Naixiang Gao and JunEn Low and Timothy Chen and Mac Schwager},
+      year={2025},
+      eprint={2503.03984},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2503.03984}, 
+    }
+                </code></pre>
+            </div>
+            
+            
+
+    </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <div class="content has-text-centered">
+                        <p>
+                            Website template borrowed from <a href="https://nerfies.github.io">Nerfies</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
